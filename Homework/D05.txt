@@ -1,0 +1,34 @@
+Problem1:
+{
+  "@iot.nextLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams?$skip=100",
+  "value" : [ {
+    "name" : "PM2.5",
+    "description" : "細懸浮微粒 PM2.5",
+    "observationType" : "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "unitOfMeasurement" : {
+      "name" : "microgram per cubic meter",
+      "symbol" : "μg/m3",
+      "definition" : "https://acronyms.thefreedictionary.com/ug%2Fm3"
+    },
+    "Sensor@iot.navigationLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams(1)/Sensor",
+    "ObservedProperty@iot.navigationLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams(1)/ObservedProperty",
+    "Thing@iot.navigationLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams(1)/Thing",
+    "Observations@iot.navigationLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams(1)/Observations",
+    "@iot.id" : 1,
+    "@iot.selfLink" : "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams(1)"
+  }
+Problem2:
+  import requets
+  url = https://sta.ci.taiwan.gov.tw/STA_AirQuality_EPAIoT/v1.0/Things
+  ### just access the url to acquire the data, then you can choose to access it as json file
+  data = requests.get(url)
+
+Problem3:
+##psuedo code procedure:
+for id in iot.ids:
+  url = https://sta.ci.taiwan.gov.tw/STA_AirQuality_EPAIoT/v1.0/Things
+  location[id] = requests.get(url)['Locations']
+  datastreams[id] = requests.get(url)['Datastreams']
+  ###then access values in datastreams
+
+  end
