@@ -1,0 +1,4 @@
+Problem1. Compare sizes between Raspberry Pi OS\
+Ans: With applications: 2.8GB,  with Desktop: 1.1 GB, Only OS : 0.4GB\
+Problem2,3 : Complete Raspberry Pi OS password and network settings\
+Ans: All in the starting procedures, just follow the steps
